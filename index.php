@@ -1,14 +1,21 @@
 <?php
 
+session_start();
+
+require_once 'traitement/jsonHandler.php';
+
+$data = loadJsonData('asset/json/punishment.json');
+
+$_SESSION['data'] = $data;
 
 
-include_once 'header.php';
+include 'composants/header.php';
 
-include_once 'board.php';
+include 'composants/board.php';
 
-include_once 'parametre.php';
+include 'composants/parametre.php';
 
-include_once 'footer.php';
+include 'composants/footer.php';
 
 
 echo "Hello, World!";
